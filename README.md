@@ -33,6 +33,9 @@ Auto update feature
 "Open Babun Here" context menu entry
 
 Have a look at a sample screenshot!
-"Open Babun Here" context menu entry
 
-Have a look at a sample screenshot!
+<img width="1365" height="729" alt="image" src="https://github.com/user-attachments/assets/9a00c3f1-d921-48ad-ba07-d4b497b17010" />
+
+Do you like it? Follow Alts Studio on Gamejolt [Alts Studio](https://gamejolt.com/@AltsStudio)
+
+## Features in 5 minutes
