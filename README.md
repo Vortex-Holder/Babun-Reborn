@@ -1,2 +1,3 @@
-# Babun-Reborn
-🌀 𝕭𝖆𝖇𝖚𝖓 𝕽𝖊𝖇𝖔𝖗𝖓: 𝕿𝖍𝖊 𝖀𝖑𝖙𝖎𝖒𝖆𝖙𝖊 𝕿𝖊𝖗𝖒𝖎𝖓𝖆𝖑 𝕰𝖛𝖔𝖑𝖚𝖙𝖎𝖔𝖓
+# Babun - The Reborn of a Good Terminal [PROJECT REBORN]
+Want to use a Linux-like console on your Windows computer? Try Babun Reborn!
+By [Alts Studio](https://gamejolt.com/@AltsStudio)
