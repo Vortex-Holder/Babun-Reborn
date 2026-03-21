@@ -9,3 +9,30 @@ The application will be installed to the %USER_HOME%\.babun directory.
 
 | Note | Babun Reborn was produced by Alts Studio. |
 | :--- | :--- |
+## Features
+Babun features the following:
+
+Pre-configured Cygwin with a lot of addons
+
+Silent command-line installer, no admin rights required
+
+pact - advanced package manager (like apt-get or yum)
+
+xTerm-256 compatible console
+
+HTTP(s) proxying support
+
+Plugin-oriented architecture
+
+Pre-configured git and shell
+
+Integrated oh-my-zsh
+
+Auto update feature
+
+"Open Babun Here" context menu entry
+
+Have a look at a sample screenshot!
+"Open Babun Here" context menu entry
+
+Have a look at a sample screenshot!
