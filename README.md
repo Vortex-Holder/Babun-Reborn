@@ -115,3 +115,99 @@ Babun has a pre-configured git. The only thing you should do after the installat
 ```git config --global user.name "your name"```
 
 ```git config --global user.email "your@email.com"```
+
+There’s a lot of great git aliases provided by the git plugin:
+
+```gitalias['alias.cp']='cherry-pick'
+gitalias['alias.st']='status -sb'
+gitalias['alias.cl']='clone'
+gitalias['alias.ci']='commit'
+gitalias['alias.co']='checkout'
+gitalias['alias.br']='branch'
+gitalias['alias.dc']='diff --cached'
+gitalias['alias.lg']="log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all"
+gitalias['alias.last']='log -1 --stat'
+gitalias['alias.unstage']='reset HEAD --'
+```
+### Installing and removing packages
+Babun is shipped with ```pact``` - a Linux like package manager. It uses the cygwin repository for downloading packages:
+
+```{ ~ } » pact install arj                                                                     ~
+Working directory is /setup
+Mirror is http://mirrors.kernel.org/sourceware/cygwin/
+setup.ini taken from the cache
+
+Installing arj
+Found package arj
+--2014-03-30 19:34:38--  http://mirrors.kernel.org/sourceware/cygwin//x86/release/arj/arj-3.10.22-1.tar.bz2
+Resolving mirrors.kernel.org (mirrors.kernel.org)... 149.20.20.135, 149.20.4.71, 2001:4f8:1:10:0:1994:3:14, ...
+Connecting to mirrors.kernel.org (mirrors.kernel.org)|149.20.20.135|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 189944 (185K) [application/x-bzip2]
+Saving to: `arj-3.10.22-1.tar.bz2'
+
+100%[=======================================>] 189,944      193K/s   in 1.0s
+
+2014-03-30 19:34:39 (193 KB/s) - `arj-3.10.22-1.tar.bz2' saved [189944/189944]
+
+Unpacking...
+Package arj installed
+```
+Here’s the list of all pact’s features:
+
+```{ ~ }  » pact --help
+pact: Installs and removes Cygwin packages.
+
+Usage:
+  "pact install <package names>" to install given packages
+  "pact remove <package names>" to remove given packages
+  "pact update <package names>" to update given packages
+  "pact show" to show installed packages
+  "pact find <patterns>" to find packages matching patterns
+  "pact describe <patterns>" to describe packages matching patterns
+  "pact packageof <commands or files>" to locate parent packages
+  "pact invalidate" to invalidate pact caches (setup.ini, etc.)
+Options:
+  --mirror, -m <url> : set mirror
+  --invalidate, -i       : invalidates pact caches (setup.ini, etc.)
+  --force, -f : force the execution
+  --help
+  --version
+```
+### Changing the default shell
+The zsh (with .oh-my-zsh) is the default babun’s shell.
+
+Executing the following command will output your default shell:
+
+```{ ~ } » babun shell```
+```/bin/zsh```
+
+In order to change your default shell execute:
+
+```{ ~ } » babun shell /bin/bash```
+```/bin/zsh```
+```/bin/bash```
+
+The output contains two lines: the previous default shell and the new default shell
+
+### Checking the configuration
+Execute the following command the check the configuration:
+
+```{ ~ }  » babun check                                                                         ~
+Executing babun check
+Prompt speed      [OK]
+Connection check  [OK]
+Update check      [OK]
+Cygwin check      [OK]
+```
+By executing this command you can also check whether there is a newer cygwin version available:
+
+```{ ~ }  » babun check                                                                            ~
+Executing babun check
+Prompt speed      [OK]
+Connection check  [OK]
+Update check      [OK]
+Cygwin check      [OUTDATED]
+Hint: the underlying Cygwin kernel is outdated. Execute 'babun update' and follow the instructions!
+```
+It will check if there are problems with the speed of the git prompt, if there’s access to the Internet or finally if you are running the newest version of babun.
