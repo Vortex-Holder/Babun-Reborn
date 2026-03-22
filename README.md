@@ -111,6 +111,7 @@ To setup proxy uncomment following lines in the ```.babunrc``` file ```(%USER_HO
 ```
 ### Setting up git
 Babun has a pre-configured git. The only thing you should do after the installation is to add your name and email to the git config:
+
 ```git config --global user.name "your name"```
 
 ```git config --global user.email "your@email.com"```
