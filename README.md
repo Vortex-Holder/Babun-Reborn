@@ -211,3 +211,80 @@ Cygwin check      [OUTDATED]
 Hint: the underlying Cygwin kernel is outdated. Execute 'babun update' and follow the instructions!
 ```
 It will check if there are problems with the speed of the git prompt, if there’s access to the Internet or finally if you are running the newest version of babun.
+
+The command will output hints if problems occur:
+
+```{ ~ } » babun check                                                                          ~
+Executing babun check
+Prompt speed      [SLOW]
+Hint: your prompt is very slow. Check the installed 'BLODA' software.
+Connection check  [OK]
+Update check      [OK]
+Cygwin check      [OK]
+```
+On each startup, but only every 24 hours, babun will execute this check automatically. You can disable the automatic check in the ~/.babunrc file.
+### Tweaking the configuration
+You can tweak some config options in the ~/.babunrc file. Here’s the full list of variables that may be modified:
+
+```# JVM options
+export JAVA_OPTS="-Xms128m -Xmx256m"
+
+# Modify these lines to set your locale
+export LANG="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+# Uncomment these lines to the set your machine's default locale (and comment out the UTF-8 ones)
+# export LANG=$(locale -uU)
+# export LC_CTYPE=$(locale -uU)
+# export LC_ALL=$(locale -uU)
+
+# Uncomment this to disable daily auto-update & proxy checks on startup (not recommended!)
+# export DISABLE_CHECK_ON_STARTUP="true"
+
+# Uncomment to increase/decrease the check connection timeout
+# export CHECK_TIMEOUT_IN_SECS=4
+
+# Uncomment this lines to set up your proxy
+# export http_proxy=http://user:password@server:port
+# export https_proxy=$http_proxy
+# export ftp_proxy=$http_proxy
+# export no_proxy=localhost
+```
+### Updating babun
+To update babun to the newest version execute:
+
+```babun update```
+
+
+Please note that your local configuration files will not be overwritten.
+
+The 'babun update' command will also update the underlying cygwin version if never version is available. In such case babun will download the new cygwin installer, close itself and start the cygwin installation process. Once cygwin installation is completed babun will restart.
+
+## Screenshots
+Startup Screen
+<img width="827" height="488" alt="screen_welcome" src="https://github.com/user-attachments/assets/50adfb04-e809-4d36-925d-a1e9aef72501" />
+Pact - package installation
+<img width="827" height="487" alt="screen_pact_install" src="https://github.com/user-attachments/assets/6b6eb8ab-109e-4208-9f1a-4938a996c526" />
+Pact - package installed
+<img width="832" height="489" alt="screen_pact_installed" src="https://github.com/user-attachments/assets/0dcdee73-bbe3-4e77-a622-adf956d2471c" />
+Babun oh-my-zsh - auto-update
+<img width="770" height="549" alt="screen_zsh_update" src="https://github.com/user-attachments/assets/6cc59c78-13d0-451d-af25-38c19f538b57" />
+VIM syntax highlighting
+<img width="827" height="484" alt="screen_vim" src="https://github.com/user-attachments/assets/c9f43633-4012-45c7-beda-ad974be0f354" />
+Nano syntax highlighting
+<img width="829" height="486" alt="screen_nano" src="https://github.com/user-attachments/assets/6acc8186-0fe8-4256-bee1-848706d17da1" />
+Git aliases - git lg
+<img width="828" height="489" alt="screen_git_lg" src="https://github.com/user-attachments/assets/48c274dc-efe7-4db6-ad03-ab86a92723e1" />
+Git aliases - git st
+<img width="828" height="488" alt="screen_git_st" src="https://github.com/user-attachments/assets/1b69951a-1880-41c5-9fea-4ac87a52b320" />
+Shell prompt
+<img width="825" height="488" alt="screen_shell" src="https://github.com/user-attachments/assets/32ed2294-ceeb-47dd-a9b6-b88aff10290d" />
+Babun update
+<img width="826" height="486" alt="screen_update" src="https://github.com/user-attachments/assets/59c0290b-dc4c-47e8-a0d1-edd0943ab182" />
+Open Babun here - Context Menu
+<img width="625" height="155" alt="screen_context_menu" src="https://github.com/user-attachments/assets/19ffa16f-c6e4-42aa-b460-894cde38dfa6" />
+## Development
+Babun is back! New name is Babun Reborn.
+
+Have fun :D
